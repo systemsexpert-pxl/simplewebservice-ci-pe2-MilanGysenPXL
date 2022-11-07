@@ -31,3 +31,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/webservice:latest
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: github-actions-artifact
+          path: target
