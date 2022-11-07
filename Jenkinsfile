@@ -38,7 +38,7 @@ podTemplate(yaml: '''
   node(POD_LABEL) {
 
     stage('Maven: Retrieve project') {
-      git url: 'https://github.com/systemsexpert-pxl/simplewebservice.git', branch: 'main'
+      git url: 'https://github.com/systemsexpert-pxl/simplewebservice-ci-pe2-MilanGysenPXL.git', branch: 'main'
       container('maven') {
         stage('Maven: Build project') {
           sh '''
